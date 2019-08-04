@@ -1,68 +1,59 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Marvel Hero Cards
 
-## Available Scripts
+## Descricao
+Desafio proposto no processo de selecao para vaga de desenvolvedor front-end. <br>
 
-In the project directory, you can run:
+O projeto consiste em uma interface criada com React onde será consumida uma API, disponibilizada pela Marvel, que mostrará todos os heróis do universo Marvel.<br>
+A ordenacao da lista é por order alfabética. É possível realizar uma busca pelo nome dos heróis através de um filtro<br>
 
-### `npm start`
+Nessa interface é possível acessar a descrição do heróis clicando no card do mesmo.<br>
+Dentro das informações do herói é possível visualizar uma breve descrição, sendo possível altera-la, e todas as séries que este herói participou.<br>
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+O frontend foi criado com React + Redux, e se encontra no diretório /client.<br>
+Para o banco de usados, foi usado o MongoDB. Este foi virtualizado num cluster, afim de praticidade.<br>
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Instalacao
+Para instalar o projeto, basta baixa-lo ou clona-lo. Depois, instale as dependências do projeto via
 
-### `npm test`
+`npm install`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ou
 
-### `npm run build`
+`yarn install`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para consumir a API disponibilizada pela Marvel é necessário possuir um Chave Pública e uma Chave Privada. Para isso é necessário ter uma conta no [Site da Marvel](https://developer.marvel.com/docs#). <br>
+Com as chaves em mãos, é necessário criar um arquivo ".env.development" e adicionar suas chaves:
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+```
+// .env.development
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+REACT_APP_MARVEL_PUBLIC_KEY=your_key
+REACT_APP_MARVEL_PRIVATE_KEY=your_key
+```
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Rodando o projeto
+Após a instalacao das dependencias e adicionado as chaves publicas e privadas, o mesmo pode ser inicializado através da pasta raíz e utilizar
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`npm start`
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+ou
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+`yarn start`
 
-## Learn More
+## Testando o projeto
+Para realizar os testes no projeto basta:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`npm test`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ou
 
-### Code Splitting
+`yarn test`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Tecnologias usadas
+[ReactJS](https://pt-br.reactjs.org/) <br>
+[Styled-Components](https://www.styled-components.com/) <br>
+[Material-UI](https://material-ui.com/) <br>
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[Jest](https://jestjs.io/) <br>
+[Redux-saga](https://redux-saga.js.org/) <br>
